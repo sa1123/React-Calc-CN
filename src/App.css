@@ -1,0 +1,73 @@
+
+body {
+  margin: 0;
+  background: cornflowerblue;
+}
+
+.calculator-grid {
+  display: grid;
+  margin-top: 2rem;
+  justify-content: center;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+  .OperationButton {
+    background-color: palegoldenrod;
+  }
+  .OperationButton:hover {
+    background-color: darkslategray;
+    color: gold;
+  }
+}
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  background-color: lightblue;
+}
+.calculator-grid>button:hover{
+  background-color: greenyellow;
+}
+
+#ac {
+  grid-column: span 2;
+}
+
+#ac:hover{
+  color: red;
+}
+
+.equals {
+  grid-column: span 2;
+}
+
+.equals:hover{
+  color: orange;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: .75rem;
+  word-wrap: break-word;
+  word-break: break-all;
+  border: 3.5px solid lightgreen;
+}
+
+.output .previous-operand {
+  color: rgba(255, 255, 255, .75);
+  font-size: 1.5rem;
+}
+
+.output .current-operand {
+  color: white;
+  font-size: 2.5rem;
+}
+
+#del:hover {
+  color: yellow;
+}
